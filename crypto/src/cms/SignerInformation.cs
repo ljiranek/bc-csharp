@@ -345,7 +345,7 @@ namespace Org.BouncyCastle.Cms
 //				if (sigParams != null)
 //					throw new CmsException("unrecognised signature parameters provided");
 
-                string signatureName = digestName + "with" + Helper.GetEncryptionAlgName(this.EncryptionAlgOid);
+                string signatureName = Helper.GetDigestAlgName(this.EncryptionAlgOid) + "with" + Helper.GetEncryptionAlgName(this.EncryptionAlgOid);
 
                 sig = Helper.GetSignatureInstance(signatureName);
 
